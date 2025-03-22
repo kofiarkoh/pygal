@@ -22,8 +22,7 @@ jobs:
       - name: 'Checkout repository'
         uses: actions/checkout@v4
         with:
-          ref: 'dev'
-          submodules: 'true'
+          ref: 'feature/set-eco-ci'
 
       - name: Checkout Repo Measurement
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
@@ -41,7 +40,7 @@ jobs:
       - name: pip install
         shell: bash
         run: |
-          pip install -r requirements.txt
+          pip install -r ./docs/requirements.txt
 
       - name: Setup Python Measurment
         uses: green-coding-solutions/eco-ci-energy-estimation@v4 # use hash or @vX here (See note below)
